@@ -1,6 +1,8 @@
 import { Dialog, Transition } from "@headlessui/react"
 import { Fragment, useState } from "react"
-
+import { doc, runTransaction, serverTimestamp } from "firebase/firestore";
+import { useSetRecoilState } from "recoil";
+import  { firestore }  from '../firebase'
 
 export default function CreatePasswordModal() {
     const [open, setOpen] = useState (true)
